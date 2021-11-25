@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassEffects</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:lightblue;
+        }
+        .parent{
+            position: relative;
+            background-color: white;
+            width:200px;
+            height:300px;
+            left:500px;
+            top:200px;
+            border-radius:5px;
+            background:linear-gradient(
+                rgba(255,255,255,0.1),
+                rgba(255,255,255,0.1));   
+            backdrop-filter:blur(2rem);
+            z-index: 5;
+            box-shadow: 2px 2px 2px lightslategray;
+        }
+        div h1{
+            padding-top:40px;
+            padding-left:35px;
+        }
+        div h2{
+            padding-top:130px;
+            padding-left:30px;
+        }
+        .circle1{
+            position:absolute;
+            height:150px;
+            width:150px;
+            background-color: hotpink;
+            border-radius: 50%;
+            left:440px;
+            top:140px;
+            z-index: 1;
+        }
+        .circle2{
+            position:absolute;
+            height:150px;
+            width:150px;
+            background-color:yellow;
+            border-radius: 50%;
+            left:600px;
+            top:400px;
+            z-index: 1;
+        }
+        @media (max-width:600px) {
+            .parent{
+                left:30px;
+            }
+            .circle1{
+                left:20px;
+            }
+            .circle2{
+                left:100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>YOKESH</h1>
+        <h2>FRONTEND DEVELOPER</h2>
+    </div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</body>
+</html>
